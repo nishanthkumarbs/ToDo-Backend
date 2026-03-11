@@ -40,6 +40,10 @@ public class UserController {
             user.setAvatar(updates.get("avatar"));
         }
 
+        if (updates.containsKey("email")) {
+            user.setEmail(updates.get("email"));
+        }
+
         return userRepository.save(user);
     }
 }
